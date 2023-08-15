@@ -96,3 +96,7 @@ img {
   width: 25%;
   height: auto;
 }
+
+button {
+  margin: 5px;
+}

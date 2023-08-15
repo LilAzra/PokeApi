@@ -17,13 +17,14 @@ function PokeApi() {
     getPokemons({offset})
   }
 
-  const prevPage = (currentPagina) => {
-    const offset = currentPagina*10 > 0 ? currentPagina*10 : 0
-    setPagina(currentPagina-1)
-    setPokemons([])
-    getPokemons({offset})
+  const prevPage = () => {
+    if (pagina > 1) {
+      const newPagina = pagina - 1;
+      setPagina(newPagina);
+      setPokemons([]); 
+      getPokemons({ offset: (newPagina - 1) * 10 }); 
+    }
   }
-
 
   useEffect(() => {
     if (!(pokemons.length > 0)){
@@ -71,8 +72,8 @@ function PokeApi() {
             : <h2>Cargando...</h2>
         }
       </div>
-      <button disabled={Boolean(pagina <= 1)} onClick={() => prevPage(pagina)}>{"<"}</button>
-      <button onClick={() => nextPage(pagina)}>{">"}</button>
+      <button disabled={pagina <= 1} onClick={prevPage}>{"<Antorior"}</button>
+      <button onClick={() => nextPage(pagina)}>{"Siguiente>"}</button>
     </div>
   );
 }
@@ -82,7 +83,6 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'flex-start'
-    // flexDirection: 'colum'
   },
 
   card: {
