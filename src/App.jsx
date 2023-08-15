@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './App.css';
-
+import pokeball from './assets/pokeball.svg'
 function PokeApi() {
   const POKE_API = 'https://pokeapi.co/api/v2/pokemon/';
 
@@ -23,7 +23,7 @@ function PokeApi() {
 
   return (
     <div className="pokedex-container">
-      <center><img className="pokemon-svg" src="../public/pokeball.svg" /></center>
+      <center><img className="pokemon-svg" src={pokeball} /></center>
       <h1>Pokedex</h1>
       <form onSubmit={buscarPokemon}>
         <input value={campo} onChange={e => setCampo(e.target.value)} type="text" placeholder="Nombre del Pokémon" />
