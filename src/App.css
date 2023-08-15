@@ -1,42 +1,98 @@
-#root {
-  max-width: 1280px;
+.pokedex-container {
+  max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+  background-color: #e03a3a;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.986);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  color: #e2df0a;
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; 
 }
 
-.card {
-  padding: 2em;
+input {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 3px; 
 }
 
-.read-the-docs {
-  color: #888;
+button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.986); ;
+}
+
+.pokemon-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-name {
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: -10px;
+}
+
+.pokemon-order {
+  font-size: 18px;
+  color: #000000;
+}
+
+img {
+  width: 30%;
+  height: auto;
+  margin-top: -30px;
+  max-height: 300px;
+  display: flex;
+  gap: 20px;
+
+}
+
+.pokemon-skill {
+  gap: 16px;
+  display: flex;
+  gap: 20px;
+}
+
+.pokemon-skill > span {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 4px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.pokemon-svg {
+  margin-top: 10px;
+  width: 25%;
+  height: auto;
 }

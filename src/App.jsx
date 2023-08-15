@@ -1,38 +1,55 @@
-import { useState } from "react"
+import { useState } from "react";
+import './App.css';
 
 function PokeApi() {
+  const POKE_API = 'https://pokeapi.co/api/v2/pokemon/';
 
-  const POKE_API = 'https://pokeapi.co/api/v2/pokemon/'
-
-  const [campo, setCampo] = useState('')
-  const [pokemon, setPokemon] = useState(null)
+  const [campo, setCampo] = useState('');
+  const [pokemon, setPokemon] = useState(null);
+  const [errors, setErrors] = useState(null);
 
   const buscarPokemon = (e) => {
-    e.preventDefault()
-    fetch(POKE_API + campo.toLocaleLowerCase())
-      .then((res) => res.json())
+    e.preventDefault();
+    setErrors(null)
+    setPokemon(null)
+    fetch(POKE_API + campo.split(" ")[0].toLocaleLowerCase())
+      .then((res) => {
+        if (!res.ok) return setErrors("Escribe bien, ¡disléxico! 😃");
+        return res.json();
+      })
       .then((poke) => setPokemon(poke))
+      .catch(e => console.log(e));
   }
 
   return (
-    <div>
-      <h1>Busca Tu Pokemon</h1>
+    <div className="pokedex-container">
+      <center><img className="pokemon-svg" src="../public/pokeball.svg" /></center>
+      <h1>Pokedex</h1>
       <form onSubmit={buscarPokemon}>
-        <input value={campo} onChange={e => setCampo(e.target.value)} type="text" />
-        <button> Buscar </button>
+        <input value={campo} onChange={e => setCampo(e.target.value)} type="text" placeholder="Nombre del Pokémon" />
+        <button>Buscar</button>
       </form>
-      {
-        pokemon !== null ?
-          <>
-            <p>{pokemon.name}</p>
-            <p>{pokemon.order}</p>
-            <img src={pokemon.sprites.front_default} />
-          </>
-          : null
-      }
-    <button onClick={() => setPokemon(null)}>Clear</button>
+      {errors && <h3 className="error">{errors}</h3>}
+      {!errors && pokemon !== null ? (
+        <div className="pokemon-info">
+          <p className="pokemon-name">{pokemon.name}</p>
+          <p className="pokemon-order">N° {pokemon.order}</p>
+          {
+            campo.toLocaleLowerCase().endsWith('gay') ?
+              <img src={pokemon.sprites.front_shiny} alt="Version LG-TV" />
+              : <img src={pokemon.sprites.front_default} alt={`${pokemon.name} Sprite`} />
+          }
+          <div className="pokemon-skill">
+            {
+              pokemon.types.map(type => (
+                <span className="" key={type.type.name}>{type.type.name}</span>
+              ))
+            }
+          </div>
+        </div>
+      ) : null}
     </div>
-  )
+  );
 }
 
-export default PokeApi
+export default PokeApi;
