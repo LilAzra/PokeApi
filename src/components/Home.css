@@ -1,0 +1,45 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 2px 2px 20px 20px;
+}
+
+.home-container .header {
+    background-color: rgb(51, 51, 51);
+    padding: 20px;
+    text-align: center;
+}
+
+.home-container .title {
+    margin: 0;
+    color: white;
+    font-size: 40px;
+}
+
+.home-container .main-content {
+    text-align: center;
+}
+
+.home-container .construction-text {
+    font-size: 30px;
+}
+
+.home-container .description {
+    color: #000000;
+    padding: 50px;
+    font-size: 20px;
+}
+
+.home-container .footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.home-container .footer-text {
+    color: white;
+    margin: 0;
+}

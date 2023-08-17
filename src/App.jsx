@@ -1,19 +1,20 @@
+import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-
 import './components/App.css'
-import Home from './components/Home.jsx'
-import PokeApi from './components/PokeApi.jsx'
-import Navbar from './components/Navbar.jsx'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import PokeApi from './components/PokeApi'
+import PrimeraGeneracion from './components/PrimeraGeneracion'
 
 function App () {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path='/Home' element={<Home />} />
-        <Route path='/PokeApi' element={<PokeApi />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/PokeApi" element={<PokeApi />} />
+        <Route path="/PrimeraGeneracion" element={<PrimeraGeneracion />} />
       </Routes>
-
     </>
   )
 }

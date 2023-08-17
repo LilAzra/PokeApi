@@ -2,12 +2,16 @@ import { NavLink } from 'react-router-dom'
 
 const proyectos = [
   {
-    path: '/Home',
+    path: '/',
     label: 'Home'
   },
   {
     path: '/PokeApi',
     label: 'PokeDex'
+  },
+  {
+    path: '/PrimeraGeneracion',
+    label: 'Primera Generacion'
   }
 ]
 
