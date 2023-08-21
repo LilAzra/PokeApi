@@ -11,11 +11,15 @@ const proyectos = [
   },
   {
     path: '/PrimeraGeneracion',
-    label: 'Primera Generacion'
+    label: '1ra Generacion'
   },
   {
     path: '/SegundaGeneracion',
-    label: 'Segunda Generacion'
+    label: '2da Generacion'
+  },
+  {
+    path: '/TerceraGeneracion',
+    label: '3ra Generacion'
   }
 ]
 

@@ -6,6 +6,7 @@ import Home from './components/Home'
 import PokeApi from './components/PokeApi'
 import PrimeraGeneracion from './components/PrimeraGeneracion'
 import SegundaGeneracion from './components/SegundaGeneracion'
+import TerceraGeneracion from './components/TerceraGeneracion'
 
 function App () {
   return (
@@ -16,6 +17,7 @@ function App () {
         <Route path='/PokeApi' element={<PokeApi />} />
         <Route path='/PrimeraGeneracion' element={<PrimeraGeneracion />} />
         <Route path='/SegundaGeneracion' element={<SegundaGeneracion />} />
+        <Route path='/TerceraGeneracion' element={<TerceraGeneracion />} />
       </Routes>
     </>
   )
