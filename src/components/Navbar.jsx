@@ -12,6 +12,10 @@ const proyectos = [
   {
     path: '/PrimeraGeneracion',
     label: 'Primera Generacion'
+  },
+  {
+    path: '/SegundaGeneracion',
+    label: 'Segunda Generacion'
   }
 ]
 

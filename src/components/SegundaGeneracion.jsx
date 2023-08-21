@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import './PrimeraGeneracion.css'
+import './SegundaGeneracion.css'
 
-function PrimeraGeneracion () {
+function SegundaGeneracion () {
   const [pokemons, setPokemons] = useState([])
 
   useEffect(() => {
@@ -9,7 +9,7 @@ function PrimeraGeneracion () {
   }, [])
 
   const getPokemonsPG = async () => {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100&offset=151')
     const data = await response.json()
 
     const pokemonsData = await Promise.all(
@@ -24,7 +24,7 @@ function PrimeraGeneracion () {
 
   return (
     <div className='generacion-container'>
-      <h2 className='titulo-h2PG'>Primera Generación</h2>
+      <h2 className='titulo-h2PG'>Segunda Generación</h2>
       <ul className='pokemon-list'>
         {pokemons.map((pokemon) => (
           <li key={pokemon.id} className={`pokemon ${pokemon.types[0].type.name}`}>
@@ -45,4 +45,4 @@ function PrimeraGeneracion () {
   )
 }
 
-export default PrimeraGeneracion
+export default SegundaGeneracion
