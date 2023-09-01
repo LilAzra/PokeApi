@@ -14,13 +14,13 @@ function GeneracionAllList () {
   return (
     <div style={style.div}>
       <h2 style={style.h2}>Lista de Generaciones</h2>
-      <ul style={style.ul}>
+      <li style={style.ul}>
         {generations.map((generation) => (
           <li style={style.li} key={generation.name}>
             <Link to={`/generation/${generation.name}`}>{generation.name}</Link>
           </li>
         ))}
-      </ul>
+      </li>
     </div>
   )
 }
@@ -29,20 +29,30 @@ export default GeneracionAllList
 
 const style = {
   div: {
-    color: 'green',
+    color: 'white',
+    display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
-    display: 'flex'
+    alignItem: 'center'
   },
   li: {
-    textDecoration: 'none',
-    justifyContent: 'center',
-    fontSize: '20px'
+    fontSize: '20px',
+    textAlign: 'center',
+    padding: '10px'
   },
   ul: {
-    color: 'green'
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    listStyle: 'none',
+    padding: '0',
+    margin: '0'
   },
   h2: {
-    marginTop: '90px',
-    fontSize: '30px'
+    fontSize: '30px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItem: 'center'
   }
 }
