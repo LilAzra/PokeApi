@@ -1,39 +1,24 @@
 import { NavLink } from 'react-router-dom'
 
-const proyectos = [
-  {
-    path: '/',
-    label: 'Home'
-  },
-  {
-    path: '/PokeApi',
-    label: 'PokeDex'
-  },
-  {
-    path: '/PrimeraGeneracion',
-    label: '1ra Generacion'
-  },
-  {
-    path: '/SegundaGeneracion',
-    label: '2da Generacion'
-  },
-  {
-    path: '/TerceraGeneracion',
-    label: '3ra Generacion'
-  }
-]
-
 function Navbar () {
   return (
     <nav style={style.nav}>
       <ul style={style.ul}>
-        {proyectos.map(item => (
-          <li style={style.li} key={item.path}>
-            <NavLink style={style.a} to={item.path}>
-              {item.label}
-            </NavLink>
-          </li>
-        ))}
+        <li style={style.li}>
+          <NavLink style={style.a} to='/'>
+            Home
+          </NavLink>
+        </li>
+        <li style={style.li}>
+          <NavLink style={style.a} to='/PokeApi'>
+            PokeDex
+          </NavLink>
+        </li>
+        <li style={style.li}>
+          <NavLink style={style.a} to='/generations'>
+            Generaciones
+          </NavLink>
+        </li>
       </ul>
     </nav>
   )
@@ -48,6 +33,7 @@ const style = {
   ul: {
     display: 'flex',
     justifyContent: 'center',
+    flexWrap: 'wrap',
     alignItems: 'center',
     listStyle: 'none',
     padding: '0',

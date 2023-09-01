@@ -30,7 +30,7 @@ function SearchPokemon () {
         ? (
           <div className='pokemon-info'>
             <p className='"pokemon-name'>{pokemon.name}</p>
-            <p className='pokemon-order'>N° {pokemon.order}</p>
+            <p className='pokemon-order'>N° {pokemon.id}</p>
             {
                 campo.toLocaleLowerCase().endsWith('gay')
                   ? (

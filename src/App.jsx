@@ -4,9 +4,8 @@ import './components/App.css'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import PokeApi from './components/PokeApi'
-import PrimeraGeneracion from './components/PrimeraGeneracion'
-import SegundaGeneracion from './components/SegundaGeneracion'
-import TerceraGeneracion from './components/TerceraGeneracion'
+import GeneracionAll from './components/GeneracionAll'
+import GeneracionAllList from './components/GeneracionAllList'
 
 function App () {
   return (
@@ -15,9 +14,8 @@ function App () {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/PokeApi' element={<PokeApi />} />
-        <Route path='/PrimeraGeneracion' element={<PrimeraGeneracion />} />
-        <Route path='/SegundaGeneracion' element={<SegundaGeneracion />} />
-        <Route path='/TerceraGeneracion' element={<TerceraGeneracion />} />
+        <Route path='/generation/:id' element={<GeneracionAll />} />
+        <Route path='/generations' element={<GeneracionAllList />} />
       </Routes>
     </>
   )
