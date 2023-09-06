@@ -17,7 +17,7 @@ function GeneracionAllList () {
       <ul style={style.ul}>
         {generations.map((generation) => (
           <li style={style.li} key={generation.name}>
-            <Link to={`/generation/${generation.name}`}>{generation.name}</Link>
+            <Link style={{ color: 'green' }} to={`/generation/${generation.name}`}>{generation.name}</Link>
           </li>
         ))}
       </ul>
@@ -38,7 +38,9 @@ const style = {
   li: {
     fontSize: '20px',
     textAlign: 'center',
-    padding: '10px'
+    padding: '10px',
+    textTransform: 'uppercase',
+    textColor: 'green'
   },
   ul: {
     display: 'flex',
