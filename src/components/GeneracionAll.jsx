@@ -36,7 +36,6 @@ function GeneracionAll () {
 
   return (
     <div className='generacion-container'>
-      <h2>Lista de Generaciones</h2>
       <GeneracionAllList />
       <ul className='pokemon-list'>
         {
