@@ -57,7 +57,7 @@ function PokeApi () {
               <div key={uuid()} style={styles.card}>
                 <img style={styles.image} src={pokemonData.sprites.front_default} alt={pokemonData.name} />
                 <div style={styles.name}>{pokemonData.name}</div>
-                <div style={styles.types}>
+                <div className='pokemon-type' style={styles.types}>
                   {pokemonData.types.map(typeInfo => (
                     <span key={typeInfo.type.name}>{typeInfo.type.name} </span>
                   ))}
@@ -76,8 +76,12 @@ function PokeApi () {
 const styles = {
   flex: {
     display: 'flex',
+    justifyContent: 'center',
     flexWrap: 'wrap',
-    justifyContent: 'flex-start'
+    alignItems: 'center',
+    listStyle: 'none',
+    padding: '0',
+    margin: '0'
   },
 
   card: {

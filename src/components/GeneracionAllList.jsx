@@ -14,13 +14,13 @@ function GeneracionAllList () {
   return (
     <div style={style.div}>
       <h2 style={style.h2}>Lista de Generaciones</h2>
-      <li style={style.ul}>
+      <ul style={style.ul}>
         {generations.map((generation) => (
           <li style={style.li} key={generation.name}>
             <Link to={`/generation/${generation.name}`}>{generation.name}</Link>
           </li>
         ))}
-      </li>
+      </ul>
     </div>
   )
 }
