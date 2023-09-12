@@ -72,11 +72,11 @@ function PokeApi () {
           )}
         </Row>
       </div>
-      <div className='text-center'>
-        <Button className='boton-paginacion' disabled={pagina <= 1} onClick={prevPage}>
+      <div className='text-center d-flex gap-3 justify-content-center'>
+        <Button variant='dark' disabled={pagina <= 1} onClick={prevPage}>
           {'< Anterior'}
         </Button>
-        <Button className='boton-paginacion' onClick={() => nextPage(pagina)}>
+        <Button variant='dark' onClick={() => nextPage(pagina)}>
           {'Siguiente >'}
         </Button>
       </div>

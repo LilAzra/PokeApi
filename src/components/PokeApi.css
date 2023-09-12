@@ -101,12 +101,6 @@ img {
     height: auto;
 }
 
-.boton-paginacion {
-    color: rgb(22, 122, 22);
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 5px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.986);
-    font-size: 13px;
+.button {
+    gap: 10px
 }

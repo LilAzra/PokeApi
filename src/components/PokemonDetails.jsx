@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Modal } from 'react-bootstrap'
+import { Button, Col, Modal, Row } from 'react-bootstrap'
 
 const customModalStyle = {
   maxWidth: '400px',
@@ -12,42 +12,49 @@ const customModalStyle = {
   textAlign: 'center'
 }
 
-const imageStyle = {
-  maxWidth: '100%',
-  margin: '0 auto'
-}
+// const imageStyle = {
+//   maxWidth: '100%',
+//   margin: '0 auto'
+// }
 
-const nameStyle = {
-  fontSize: '24px',
-  fontWeight: 'bold',
-  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-  margin: '10px 0'
-}
+// const nameStyle = {
+//   fontSize: '24px',
+//   fontWeight: 'bold',
+//   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+//   margin: '10px 0'
+// }
 
-const infoStyle = {
-  textAlign: 'left',
-  marginTop: '20px'
-}
+// const infoStyle = {
+//   textAlign: 'left',
+//   marginTop: '20px'
+// }
 
-function PokemonDetails({ pokemon, setIsCardOpen }) {
+function PokemonDetails ({ pokemon, setIsCardOpen }) {
   return (
     <Modal
       show={true}
       onHide={() => setIsCardOpen(false)}
       style={customModalStyle}
     >
-      <Modal.Header closeButton>
-        <Modal.Title style={nameStyle}>{pokemon.name}</Modal.Title>
-      </Modal.Header>
       <Modal.Body>
-        <img
-          src={pokemon.sprites.front_default}
-          alt={pokemon.name}
-          style={imageStyle}
-        />
-        <div style={infoStyle}>
-          <p><strong>Altura:</strong> {pokemon.height}</p>
-          <p><strong>Peso:</strong> {pokemon.weight}</p>
+        <h2 className='pb-4'>{pokemon.name}</h2>
+        <div className='d-flex justify-content-center align-items-center'>
+          <Col>
+            <img
+              style={{
+                width: 100,
+                height: 100
+              }}
+              src={pokemon.sprites.other?.dream_world.front_default || pokemon.sprites.front_default}
+              alt={pokemon.name}
+            />
+          </Col>
+          <Col>
+            <div>
+              <p><strong>Altura:</strong> {pokemon.height}</p>
+              <p><strong>Peso:</strong> {pokemon.weight}</p>
+            </div>
+          </Col>
         </div>
       </Modal.Body>
       <Modal.Footer>
