@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 // import { Container, Row, Col } from 'react-bootstrap'
 import './GeneracionAll.css'
-import GeneracionAllList from './GeneracionAllList'
 import PokemonDetails from './PokemonDetails'
 import CatalogMagic from './PantallaCarga'
 
@@ -45,8 +44,6 @@ function GeneracionAll () {
   useEffect(() => {
     getPokemons()
   }, [pathname])
-
-  
   return (
     <div className='generacion-container'>
       <h2 className='alert alert-success'>Generacion: {pathname.split('/')[2]}</h2>
