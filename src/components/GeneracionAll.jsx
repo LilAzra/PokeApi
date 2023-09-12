@@ -46,6 +46,7 @@ function GeneracionAll () {
     getPokemons()
   }, [pathname])
 
+  
   return (
     <div className='generacion-container'>
       {isCardOpen && (
@@ -62,14 +63,14 @@ function GeneracionAll () {
         <div className='pokemon-list'>
           {pokemons.map((pokemon) => (
             <div key={pokemon.id} className={`pokemon border rounded p-2 text-center ${pokemon.types[0].type.name} mb-3 mx-2`} onClick={() => infoPokeonCard(pokemon)}>
-              <div className="pokemon-number">#{pokemon.id.toString().padStart(3, '0')}</div>
+              <div className='pokemon-number'>#{pokemon.id.toString().padStart(3, '0')}</div>
               <img
                 src={pokemon.sprites.front_default}
                 alt={pokemon.name}
-                className="pokemon-image"
+                className='pokemon-image'
                 style={{ maxWidth: '100%', marginBottom: '10px' }}
               />
-              <div className="pokemon-name">{pokemon.name}</div>
+              <div className='pokemon-name'>{pokemon.name}</div>
               <div className='pokemon-types'>
                 {pokemon.types.map((typeInfo) => (
                   <span key={typeInfo.type.name} className={`type ${typeInfo.type.name}`}>

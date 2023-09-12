@@ -13,10 +13,7 @@ const customModalStyle = {
 }
 
 const imageStyle = {
-  maxWidth: '80%',
-  height: 'auto',
-  borderRadius: '8px',
-  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+  maxWidth: '100%',
   margin: '0 auto'
 }
 
@@ -48,7 +45,6 @@ function PokemonDetails({ pokemon, setIsCardOpen }) {
           alt={pokemon.name}
           style={imageStyle}
         />
-
         <div style={infoStyle}>
           <p><strong>Altura:</strong> {pokemon.height}</p>
           <p><strong>Peso:</strong> {pokemon.weight}</p>
