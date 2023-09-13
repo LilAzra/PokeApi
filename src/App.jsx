@@ -10,15 +10,14 @@ import GeneracionAll from './components/GeneracionAll'
 
 function App () {
   return (
-    <>
+    <div className='app'>
       <NavbarMenu />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/PokeApi' element={<PokeApi />} />
         <Route path='/generation/:id' element={<GeneracionAll />} />
-        {/* <Route path='/generations' element={<GeneracionAllList />} /> */}
       </Routes>
-    </>
+    </div>
   )
 }
 

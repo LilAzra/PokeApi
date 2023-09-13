@@ -12,6 +12,7 @@
     color: #e2df0a;
     font-size: 40px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.986);
 }
 
 form {

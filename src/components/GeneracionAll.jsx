@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-// import { Container, Row, Col } from 'react-bootstrap'
 import './GeneracionAll.css'
 import PokemonDetails from './PokemonDetails'
 import CatalogMagic from './PantallaCarga'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Col, Modal, Row } from 'react-bootstrap'
+import { Button, Col, Modal } from 'react-bootstrap'
 
 const customModalStyle = {
   maxWidth: '400px',
@@ -11,23 +11,6 @@ const customModalStyle = {
   padding: '20px',
   textAlign: 'center'
 }
-
-// const imageStyle = {
-//   maxWidth: '100%',
-//   margin: '0 auto'
-// }
-
-// const nameStyle = {
-//   fontSize: '24px',
-//   fontWeight: 'bold',
-//   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-//   margin: '10px 0'
-// }
-
-// const infoStyle = {
-//   textAlign: 'left',
-//   marginTop: '20px'
-// }
 
 function PokemonDetails ({ pokemon, setIsCardOpen }) {
   return (

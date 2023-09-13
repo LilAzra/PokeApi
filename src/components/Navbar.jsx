@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-
+import './Navbar.css'
 function NavbarMenu () {
   const generation = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -16,6 +16,7 @@ function NavbarMenu () {
             <NavDropdown title='Generaciones'>
               {generation.map(gen => (
                 <NavDropdown.Item
+                  style={styles.div}
                   key={gen}
                   as={Link}
                   to={`/generation/${gen}`}
@@ -29,6 +30,12 @@ function NavbarMenu () {
       </Container>
     </Navbar>
   )
+}
+
+const styles = {
+  div: {
+    color: 'white'
+  }
 }
 
 export default NavbarMenu
