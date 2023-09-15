@@ -6,7 +6,6 @@ import NavbarMenu from './components/Navbar'
 import Home from './components/Home'
 import PokeApi from './components/PokeApi'
 import GeneracionAll from './components/GeneracionAll'
-// import GeneracionAllList from './components/GeneracionAllList'
 
 function App () {
   return (

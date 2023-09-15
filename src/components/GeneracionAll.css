@@ -1,6 +1,15 @@
 .generacion-container {
-  text-align: center;
-  margin: 10px;
+  
+  
+
+}
+
+.hero {
+  background-image: url('/img/portadaPoke.jpg');
+  background-repeat: no-repeat;
+  min-height: 100%;
+  min-width: 800px;
+  background-size: cover
 }
 
 .pokemon-list {
@@ -8,7 +17,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
-  
+
 }
 
 .pokemon {
@@ -63,12 +72,22 @@
   color: white;
 }
 
+.tittleCover {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  color: rgb(2, 255, 2);
+}
+
 .pokemon {
-  transition: transform 0.2s ease-in-out; 
+  transition: transform 0.2s ease-in-out;
 }
 
 .pokemon:hover {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
 
 .normal {
